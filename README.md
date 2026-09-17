@@ -1,6 +1,6 @@
 # My Call Time
 
-A minimal dark-themed app that converts recruiter messages into your time in **Belgrade, Serbia**.
+A minimal dark-themed app that converts recruiter messages into the user’s chosen city or timezone.
 
 ## Run locally
 
@@ -9,11 +9,11 @@ Install Node.js 20 or newer, then run `npm start` from this folder. Open http://
 ## Use
 
 1. Paste a time, such as `1 pm CET` or `Wednesday September 16 at 6:00pm - 6:30pm (GMT +05:00)`.
-2. Confirm the source date, including the year. Clarify the timezone if prompted.
+2. Choose **Your location** using the searchable city/timezone field. Confirm the source date, including the year. Clarify the source timezone if prompted.
 3. Select **Show my time**.
 4. Use **Add to Calendar** to download an `.ics` file. Open it in Apple Calendar and confirm the import.
 
-Settings offers 12-hour and 24-hour formats; 12-hour is the default. The preference is saved in this browser.
+Settings offers 12-hour and 24-hour formats; 12-hour is the default. The time format and destination timezone are saved in this browser. Belgrade is the initial default.
 
 ## Upload to GitHub
 
@@ -53,6 +53,8 @@ Missing years and weekday/date mismatches are flagged. When no end time is suppl
 
 ## Privacy and fonts
 
-Messages are processed locally in the browser, not sent to an API. The app loads DM Sans from Google Fonts, with a system-font fallback. Only the time-format preference is saved in local browser storage.
+Messages are processed locally in the browser, not sent to an API. The app loads DM Sans from Google Fonts, with a system-font fallback. The time-format and destination-timezone preferences are saved in local browser storage.
 
 No open-source license has been selected. Choose a license if you intend to permit reuse of a public repository.
+
+The destination list includes the IANA timezones supported by the browser, with extra familiar city aliases. If your town is not listed, select a representative city in the same timezone.
